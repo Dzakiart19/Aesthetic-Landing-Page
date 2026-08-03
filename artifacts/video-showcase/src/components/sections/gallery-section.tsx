@@ -24,10 +24,10 @@ export function GallerySection() {
           className="mb-12 flex flex-col md:flex-row justify-between items-end gap-6"
         >
            <div>
-             <h2 className="text-6xl md:text-8xl font-display text-white mb-2 leading-none">FIRE FRAMES</h2>
+             <h2 className="text-6xl md:text-8xl font-display text-white mb-2 leading-none">GALERI VIDEO</h2>
              <div className="w-full h-2 bg-gradient-to-r from-primary to-accent" />
            </div>
-           <p className="font-sans font-bold text-primary tracking-widest uppercase">Select Cuts Only</p>
+           <p className="font-sans font-bold text-primary tracking-widest uppercase">Update Setiap Hari</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 auto-rows-[250px] md:auto-rows-[400px]">
@@ -47,7 +47,7 @@ export function GallerySection() {
               <img 
                 src={img.src} 
                 alt={img.alt}
-                className="w-full h-full object-cover grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-110 transition-all duration-500 ease-out"
+                className="w-full h-full object-contain grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-110 transition-all duration-500 ease-out"
               />
               
               {/* Decorative target reticle */}

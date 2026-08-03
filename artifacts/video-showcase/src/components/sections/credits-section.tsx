@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const CREDITS = [
-  { role: "Creative Director", name: "Jaxon Reed" },
-  { role: "Visual Effects", name: "Kira V." },
-  { role: "Audio Provocateur", name: "DJ Syntax" },
-  { role: "Action Camera", name: "Leo Cruz" },
-  { role: "Color & Grade", name: "Samira Frost" },
-  { role: "Hype Assembly", name: "Max 'Glitch' Torres" }
+const CATEGORIES = [
+  { role: "Kategori Terpopuler", name: "Bokep Indo" },
+  { role: "Konten Terbaru", name: "Update Harian" },
+  { role: "Kualitas Video", name: "Full HD 1080p" },
+  { role: "Akses", name: "Gratis & Tanpa Daftar" },
+  { role: "Platform", name: "Mobile Friendly" },
+  { role: "Koleksi", name: "Ribuan Video" }
 ];
 
 export function CreditsSection() {
@@ -24,25 +24,41 @@ export function CreditsSection() {
         className="w-full max-w-6xl relative z-10"
       >
         <div className="text-center mb-24 relative">
-          <h2 className="text-6xl md:text-8xl font-display text-white uppercase tracking-tight">THE TEAM</h2>
+          <h2 className="text-6xl md:text-8xl font-display text-white uppercase tracking-tight">TENTANG KAMI</h2>
           <div className="absolute left-1/2 -translate-x-1/2 -bottom-8 w-32 h-1.5 bg-primary" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 text-center">
-          {CREDITS.map((credit, i) => (
+          {CATEGORIES.map((item, i) => (
             <motion.div 
-              key={credit.role}
+              key={item.role}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05, ease: "easeOut" }}
               className="flex flex-col space-y-1 group"
             >
-              <span className="text-sm font-sans font-bold uppercase tracking-widest text-primary/80 group-hover:text-primary transition-colors">{credit.role}</span>
-              <span className="text-3xl font-display text-white group-hover:text-glow-red transition-all duration-300">{credit.name}</span>
+              <span className="text-sm font-sans font-bold uppercase tracking-widest text-primary/80 group-hover:text-primary transition-colors">{item.role}</span>
+              <span className="text-3xl font-display text-white group-hover:text-glow-red transition-all duration-300">{item.name}</span>
             </motion.div>
           ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-24 text-center space-y-4"
+        >
+          <p className="text-white/50 font-sans text-lg">
+            Situs streaming video dewasa Indonesia terlengkap.
+          </p>
+          <p className="text-primary font-bold font-sans uppercase tracking-widest text-sm animate-pulse">
+            🔥 Nonton Sekarang — Gratis Selamanya
+          </p>
+        </motion.div>
       </motion.div>
     </section>
   );

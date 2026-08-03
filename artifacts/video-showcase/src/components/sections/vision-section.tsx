@@ -45,7 +45,7 @@ export function VisionSection() {
                <img 
                  src={still1Url} 
                  alt="Raw explosive content" 
-                 className="w-full h-full object-cover grayscale contrast-[1.5] brightness-75 group-hover:scale-110 group-hover:grayscale-0 transition-all duration-700 ease-out"
+                 className="w-full h-full object-contain grayscale contrast-[1.5] brightness-75 group-hover:grayscale-0 transition-all duration-700 ease-out"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent mix-blend-multiply opacity-80 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none" />
              </div>
