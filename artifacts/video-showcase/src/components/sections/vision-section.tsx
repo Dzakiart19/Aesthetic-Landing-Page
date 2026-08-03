@@ -1,7 +1,7 @@
 import React from 'react';
 import { CINEMA_CONFIG } from '@/config';
 import { motion } from 'framer-motion';
-import still1Url from "@assets/generated_images/still1.jpg";
+import still1Url from "@assets/images/still1.jpg";
 
 export function VisionSection() {
   return (

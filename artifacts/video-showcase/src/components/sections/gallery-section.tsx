@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Using the provided alias to load images
-import still1Url from "@assets/generated_images/still1.jpg";
-import still2Url from "@assets/generated_images/still2.jpg";
-import still3Url from "@assets/generated_images/still3.jpg";
+import still1Url from "@assets/images/still1.jpg";
+import still2Url from "@assets/images/still2.jpg";
+import still3Url from "@assets/images/still3.jpg";
 
 export function GallerySection() {
   const images = [
