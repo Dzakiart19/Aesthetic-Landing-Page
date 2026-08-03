@@ -35,11 +35,16 @@ echo "[4/4] Menginstall Firebase Tools (global)..."
 npm install -g firebase-tools
 echo "      Done."
 
+# ── Firebase Login ────────────────────────────────
+echo ""
+echo "[5/4] Firebase Login"
+echo "      Akan membuka URL — buka di browser, login,"
+echo "      lalu paste token yang diberikan di sini."
+echo ""
+firebase login --no-localhost
+
 echo ""
 echo "================================================"
-echo "  Install selesai!"
-echo ""
-echo "  Langkah berikutnya:"
-echo "  1. Login Firebase  : firebase login --no-localhost"
-echo "  2. Deploy ke hosting: bash deploy.sh"
+echo "  Semua selesai! Sekarang jalankan:"
+echo "  bash deploy.sh   — untuk build & deploy"
 echo "================================================"
