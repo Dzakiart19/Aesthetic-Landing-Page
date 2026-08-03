@@ -19,7 +19,7 @@ export function HeroSection() {
         >
           <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/30 rounded-none mb-6">
             <p className="uppercase tracking-[0.2em] text-xs md:text-sm text-primary font-bold animate-pulse">
-              🔥 HOT DROP
+              🔥 PORN VIDEOS
             </p>
           </div>
           <h1 className="text-7xl sm:text-8xl md:text-[12rem] leading-none font-display text-white text-glow-red">

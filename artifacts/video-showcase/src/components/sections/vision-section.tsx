@@ -20,15 +20,15 @@ export function VisionSection() {
           className="flex-1 space-y-10 relative z-10"
         >
           <h2 className="text-5xl md:text-7xl font-display leading-[0.9] text-white">
-            WE DON'T FOLLOW TRENDS.<br/>
-            <span className="text-primary text-glow-red">WE IGNITE THEM.</span>
+            Selamat datang di kategori Bokep Indo, tempat kumpulan video bokep Indonesia terbaru.<br/>
+            <span className="text-primary text-glow-red">Semua video full HD, durasi lengkap, dan update setiap hari.</span>
           </h2>
           <div className="w-24 h-2 bg-primary" />
           <p className="text-foreground/80 text-xl md:text-2xl font-sans font-medium leading-snug">
             {CINEMA_CONFIG.SUBTITLE}
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed font-sans max-w-lg">
-            Content isn't just consumed. It's burned into your retina. We find the most visceral, explosive cuts on the internet and bring them to the surface. No algorithm. Just raw, unfiltered heat.
+            situs streaming video Bokep dewasa Indonesia. Nonton online cepat, koleksi update setiap hari, kualitas jernih, tanpa registrasi..
           </p>
         </motion.div>
 
