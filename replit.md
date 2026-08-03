@@ -81,4 +81,5 @@ Website menggunakan 3 lapis monetisasi:
 - Foto/gambar: tampil penuh tanpa crop (`object-contain`)
 - Video: full width edge-to-edge di mobile, rasio 9:16
 - Teks harus sinkron dengan konten website (bokep Indo, update harian, gratis)
+- Teks harus **sangat agresif dan brutal** — pakai emoji 🥵🫦💦🤤, bahasa provokatif, bikin pengunjung penasaran dan nagih
 - Iklan tidak boleh terlalu agresif sampai pengunjung kabur sebelum subscribe push

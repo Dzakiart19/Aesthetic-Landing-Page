@@ -19,12 +19,15 @@ export function HeroSection() {
       >
         <div className="inline-block px-4 py-1.5 bg-primary/10 border border-primary/30 rounded-none mb-3">
           <p className="uppercase tracking-[0.2em] text-xs md:text-sm text-primary font-bold animate-pulse">
-            🔥 PORN VIDEOS
+            🥵 BOKEP TERPANAS — GRATIS SELAMANYA 💦
           </p>
         </div>
         <h1 className="text-5xl sm:text-7xl md:text-[10rem] leading-none font-display text-white text-glow-red">
           {CINEMA_CONFIG.TITLE}
         </h1>
+        <p className="mt-4 text-white/70 font-sans text-base md:text-xl tracking-wide">
+          🫦 Ribuan video hot nunggu kamu — langsung tonton, tanpa daftar, tanpa bayar 🤤
+        </p>
       </motion.div>
 
       {/* Video — full width, no side padding, portrait ratio */}

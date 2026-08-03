@@ -20,15 +20,17 @@ export function VisionSection() {
           className="flex-1 space-y-10 relative z-10"
         >
           <h2 className="text-5xl md:text-7xl font-display leading-[0.9] text-white">
-            Selamat datang di kategori Bokep Indo, tempat kumpulan video bokep Indonesia terbaru.<br/>
-            <span className="text-primary text-glow-red">Semua video full HD, durasi lengkap, dan update setiap hari.</span>
+            Bokep Indo paling HOT 🥵<br/>
+            <span className="text-primary text-glow-red">Bikin kamu basah duluan sebelum mulai 💦</span>
           </h2>
           <div className="w-24 h-2 bg-primary" />
           <p className="text-foreground/80 text-xl md:text-2xl font-sans font-medium leading-snug">
-            {CINEMA_CONFIG.SUBTITLE}
+            🫦 {CINEMA_CONFIG.SUBTITLE}
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed font-sans max-w-lg">
-            situs streaming video Bokep dewasa Indonesia. Nonton online cepat, koleksi update setiap hari, kualitas jernih, tanpa registrasi..
+            🤤 Koleksi video sange paling lengkap — ABG, Jilbab, Tante Girang, Viral TikTok. 
+            Full HD, durasi panjang, langsung play tanpa iklan ganggu. 
+            Dijamin nagih dan balik lagi tiap hari! 🔥
           </p>
         </motion.div>
 

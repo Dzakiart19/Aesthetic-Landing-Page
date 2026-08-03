@@ -24,7 +24,7 @@ export function CreditsSection() {
         className="w-full max-w-6xl relative z-10"
       >
         <div className="text-center mb-24 relative">
-          <h2 className="text-6xl md:text-8xl font-display text-white uppercase tracking-tight">TENTANG KAMI</h2>
+          <h2 className="text-6xl md:text-8xl font-display text-white uppercase tracking-tight">KENAPA KAMI? 🥵</h2>
           <div className="absolute left-1/2 -translate-x-1/2 -bottom-8 w-32 h-1.5 bg-primary" />
         </div>
 
@@ -53,10 +53,10 @@ export function CreditsSection() {
           className="mt-24 text-center space-y-4"
         >
           <p className="text-white/50 font-sans text-lg">
-            Situs streaming video dewasa Indonesia terlengkap.
+            🤤 Udah ribuan orang sange tiap hari di sini. Giliran kamu sekarang.
           </p>
           <p className="text-primary font-bold font-sans uppercase tracking-widest text-sm animate-pulse">
-            🔥 Nonton Sekarang — Gratis Selamanya
+            🥵 Tonton Sekarang — Gratis, Bebas, Tanpa Batas 💦
           </p>
         </motion.div>
       </motion.div>

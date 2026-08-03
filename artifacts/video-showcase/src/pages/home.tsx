@@ -82,7 +82,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="w-full py-16 text-center text-primary/40 text-sm font-sans font-bold uppercase tracking-[0.3em] bg-black border-t-8 border-primary relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-accent/50" />
-          <p className="relative z-10 hover:text-primary transition-colors cursor-default">© {new Date().getFullYear()} INFERNO STUDIOS. IGNITING THE WEB.</p>
+          <p className="relative z-10 hover:text-primary transition-colors cursor-default">© {new Date().getFullYear()} INFERNO STUDIOS 🥵 — SITUS BOKEP TERPANAS SE-INDONESIA 🔥💦</p>
         </footer>
       </div>
     </main>
