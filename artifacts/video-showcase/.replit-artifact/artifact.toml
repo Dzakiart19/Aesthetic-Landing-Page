@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Video Showcase"
+description = "A premium, cinematic single-page website built to showcase a video the moment visitors arrive. The video takes center stage as an elegant, playable hero, with a refined layout underneath for a title, synopsis, and contact details -- built for presenting a film, demo reel, brand story, or event video professionally."
+version = "1.0.0"
+id = "artifacts/video-showcase"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25448
+
+[services.development]
+run = "pnpm --filter @workspace/video-showcase run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/video-showcase", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/video-showcase/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25448"
+BASE_PATH = "/"
