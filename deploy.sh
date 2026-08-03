@@ -8,7 +8,7 @@ echo "================================================"
 # ── Build project ─────────────────────────────────
 echo ""
 echo "[1/2] Building project..."
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/artifacts/video-showcase"
 BASE_PATH="/" PORT=3000 pnpm run build
 echo "      Build selesai. Output: dist/public"
 
