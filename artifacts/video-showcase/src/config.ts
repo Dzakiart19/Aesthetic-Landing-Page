@@ -4,6 +4,6 @@ import posterUrl from "@assets/images/poster.jpg";
 export const CINEMA_CONFIG = {
   VIDEO_SRC: videoUrl,
   POSTER_SRC: posterUrl,
-  TITLE: "THE RECKONING",
-  SUBTITLE: "A cinematic exploration of light and shadow.",
+  TITLE: "INFERNO",
+  SUBTITLE: "The most visceral, unapologetic, trending drops on the internet. Feel the heat.",
 };

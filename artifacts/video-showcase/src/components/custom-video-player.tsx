@@ -78,7 +78,7 @@ export function CustomVideoPlayer({ className }: CustomVideoPlayerProps) {
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     hoverTimeoutRef.current = setTimeout(() => {
       if (isPlaying) setIsHovered(false);
-    }, 2500);
+    }, 2000);
   }, [isPlaying]);
 
   const handleMouseLeave = useCallback(() => {
@@ -101,7 +101,7 @@ export function CustomVideoPlayer({ className }: CustomVideoPlayerProps) {
   return (
     <div 
       ref={containerRef}
-      className={cn("group relative w-full overflow-hidden bg-black ambient-glow", className)}
+      className={cn("group relative w-full h-full overflow-hidden bg-black", className)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={togglePlay}
@@ -110,7 +110,7 @@ export function CustomVideoPlayer({ className }: CustomVideoPlayerProps) {
         ref={videoRef}
         src={CINEMA_CONFIG.VIDEO_SRC}
         poster={CINEMA_CONFIG.POSTER_SRC}
-        className="w-full h-full object-cover transition-opacity duration-700"
+        className="w-full h-full object-cover transition-all duration-300"
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
         onEnded={() => setIsPlaying(false)}
@@ -118,17 +118,22 @@ export function CustomVideoPlayer({ className }: CustomVideoPlayerProps) {
         muted={isMuted}
       />
 
-      {/* Center massive play button before interaction */}
+      {/* Intense red flash before playing */}
       {!hasStarted && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px] transition-opacity duration-500">
+        <div className="absolute inset-0 bg-primary/20 mix-blend-color-burn pointer-events-none" />
+      )}
+
+      {/* Center aggressive play button before interaction */}
+      {!hasStarted && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity duration-300">
           <button 
-            className="h-24 w-24 rounded-full border border-white/20 bg-black/40 text-white flex items-center justify-center hover:bg-primary/90 hover:text-black hover:border-primary hover:scale-105 transition-all duration-500 ease-out"
+            className="h-32 w-32 rounded-none border-4 border-primary bg-primary/20 text-white flex items-center justify-center hover:bg-primary hover:text-black hover:scale-110 active:scale-95 transition-all duration-200 ease-out animate-fire-pulse shadow-[0_0_50px_rgba(255,26,26,0.5)]"
             onClick={(e) => {
               e.stopPropagation();
               togglePlay();
             }}
           >
-            <Play className="h-10 w-10 ml-2" fill="currentColor" />
+            <Play className="h-16 w-16 ml-3" fill="currentColor" />
           </button>
         </div>
       )}
@@ -136,7 +141,7 @@ export function CustomVideoPlayer({ className }: CustomVideoPlayerProps) {
       {/* Gradient overlay for controls */}
       <div 
         className={cn(
-          "absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-500",
+          "absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black via-black/60 to-transparent transition-opacity duration-300",
           isHovered || !isPlaying ? "opacity-100" : "opacity-0"
         )} 
       />
@@ -144,48 +149,54 @@ export function CustomVideoPlayer({ className }: CustomVideoPlayerProps) {
       {/* Controls Bar */}
       <div 
         className={cn(
-          "absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-4 transition-all duration-500 transform",
+          "absolute bottom-0 left-0 right-0 p-4 sm:p-6 flex flex-col gap-4 transition-all duration-300 transform",
           isHovered || !isPlaying ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none"
         )}
-        onClick={(e) => e.stopPropagation()} // Prevent clicking controls from pausing video
+        onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center gap-4 text-white/90">
-          <button 
-            onClick={(e) => {
-              e.stopPropagation();
-              togglePlay();
-            }}
-            className="hover:text-primary transition-colors focus:outline-none"
-          >
-            {isPlaying ? <Pause className="h-6 w-6" fill="currentColor" /> : <Play className="h-6 w-6" fill="currentColor" />}
-          </button>
+        {/* Progress bar line */}
+        <div className="w-full px-2" onClick={(e) => e.stopPropagation()}>
+           <Slider 
+             value={[progress]} 
+             max={100} 
+             step={0.1}
+             onValueChange={handleSeek}
+             className="cursor-pointer"
+           />
+        </div>
 
-          <span className="text-xs font-mono tracking-wider tabular-nums opacity-75">
-            {formatTime(currentTime)} / {formatTime(duration)}
-          </span>
+        <div className="flex items-center justify-between text-white font-sans mt-2">
+          <div className="flex items-center gap-6">
+            <button 
+              onClick={(e) => {
+                e.stopPropagation();
+                togglePlay();
+              }}
+              className="hover:text-primary transition-colors focus:outline-none"
+            >
+              {isPlaying ? <Pause className="h-8 w-8" fill="currentColor" /> : <Play className="h-8 w-8" fill="currentColor" />}
+            </button>
 
-          <div className="flex-1 px-4 flex items-center group/slider cursor-pointer" onClick={(e) => e.stopPropagation()}>
-             <Slider 
-               value={[progress]} 
-               max={100} 
-               step={0.1}
-               onValueChange={handleSeek}
-             />
+            <span className="text-sm font-bold tracking-wider tabular-nums opacity-90 hidden sm:block">
+              {formatTime(currentTime)} <span className="text-primary/50">/</span> {formatTime(duration)}
+            </span>
           </div>
 
-          <button 
-            onClick={toggleMute}
-            className="hover:text-primary transition-colors focus:outline-none"
-          >
-            {isMuted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
-          </button>
-          
-          <button 
-            onClick={toggleFullscreen}
-            className="hover:text-primary transition-colors focus:outline-none ml-2"
-          >
-            <Maximize className="h-5 w-5" />
-          </button>
+          <div className="flex items-center gap-6">
+            <button 
+              onClick={toggleMute}
+              className="hover:text-primary transition-colors focus:outline-none"
+            >
+              {isMuted ? <VolumeX className="h-6 w-6" /> : <Volume2 className="h-6 w-6" />}
+            </button>
+            
+            <button 
+              onClick={toggleFullscreen}
+              className="hover:text-primary transition-colors focus:outline-none"
+            >
+              <Maximize className="h-6 w-6" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

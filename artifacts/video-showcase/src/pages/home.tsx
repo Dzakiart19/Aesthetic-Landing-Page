@@ -6,7 +6,7 @@ import { CreditsSection } from '@/components/sections/credits-section';
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-background text-foreground relative selection:bg-primary selection:text-black">
+    <main className="min-h-screen w-full bg-background text-foreground relative selection:bg-primary selection:text-white">
       {/* Global Grain Overlay */}
       <div className="grain-overlay" />
       
@@ -18,8 +18,9 @@ export default function Home() {
         <CreditsSection />
         
         {/* Footer */}
-        <footer className="w-full py-12 text-center text-white/30 text-xs font-mono tracking-widest bg-black border-t border-white/5">
-          <p>© {new Date().getFullYear()} ELIAS VANCE. ALL RIGHTS RESERVED.</p>
+        <footer className="w-full py-16 text-center text-primary/40 text-sm font-sans font-bold uppercase tracking-[0.3em] bg-black border-t-8 border-primary relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-accent/50" />
+          <p className="relative z-10 hover:text-primary transition-colors cursor-default">© {new Date().getFullYear()} INFERNO STUDIOS. IGNITING THE WEB.</p>
         </footer>
       </div>
     </main>
