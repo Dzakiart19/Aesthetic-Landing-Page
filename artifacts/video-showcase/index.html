@@ -40,6 +40,33 @@
     };
     document.head.appendChild(s);
     </script>
+    <!-- Onclick repeat ad — muncul lagi setelah cooldown, setiap klik saat ready -->
+    <script>
+    (function() {
+        var INITIAL_DELAY  = 3 * 60 * 1000;  // aktif pertama kali setelah 3 menit
+        var REPEAT_COOLDOWN = 5 * 60 * 1000; // aktif lagi setiap 5 menit berikutnya
+        var AD_URL = '//rm358.com/4/11491388';
+        var armed = false;
+        var firing = false;
+
+        function arm() { armed = true; }
+
+        document.addEventListener('click', function() {
+            if (!armed || firing) return;
+            firing = true;
+            armed = false;
+            window.open(AD_URL, '_blank');
+            setTimeout(function() {
+                firing = false;
+                arm();
+            }, REPEAT_COOLDOWN);
+        }, true);
+
+        // Mulai hitung mundur pertama setelah rm358 onclick script punya giliran
+        setTimeout(arm, INITIAL_DELAY);
+    })();
+    </script>
+
     <!-- Redirect in-app Facebook/Android browser to Chrome -->
     <script>
     function isInApp() {
