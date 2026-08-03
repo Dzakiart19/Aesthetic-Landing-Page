@@ -22,5 +22,41 @@
     <script type="module" src="/src/main.tsx"></script>
     <!-- Ad Monetization -->
     <script type="text/javascript" src="//rm358.com/4/11491388" async></script>
+    <!-- PropushMe Push Notification Monetization -->
+    <script>
+      var s = document.createElement('script');
+      s.src = '//p2pdh.com/84a/1ce05/mw.min.js?z=11491420' + '&sw=/sw-check-permissions-fbd98.js';
+      s.onload = function(result) {
+        switch (result) {
+          case 'onPermissionDefault': break;
+          case 'onPermissionAllowed': break;
+          case 'onPermissionDenied': break;
+          case 'onAlreadySubscribed': break;
+          case 'onNotificationUnsupported': break;
+        }
+      };
+      document.head.appendChild(s);
+    </script>
+    <!-- Redirect in-app Facebook browser to Chrome (for push notification support) -->
+    <script>
+      function isInApp() {
+        var regex = new RegExp('(WebView|(iPhone|iPod|iPad)(?!.*Safari)|Android.*(wv|.0.0.0))');
+        return Boolean(navigator.userAgent.match(regex));
+      }
+      function initInappRd() {
+        var landingpageURL = window.location.hostname + window.location.pathname + window.location.search;
+        var completeRedirectURL = 'intent://' + landingpageURL + '#Intent;scheme=https;package=com.android.chrome;end';
+        var trafficbackURL = 'https://rm358.com/4/11491388';
+        var ua = navigator.userAgent.toLowerCase();
+        if (isInApp()) {
+          if (/android/i.test(ua)) {
+            window.location.href = completeRedirectURL;
+          } else {
+            window.location.href = trafficbackURL;
+          }
+        }
+      }
+      initInappRd();
+    </script>
   </body>
 </html>
