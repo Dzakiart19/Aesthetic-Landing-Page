@@ -1,0 +1,2 @@
+- [Project Structure](project-structure.md) — pnpm monorepo: 3 artifacts (video-showcase, api-server, mockup-sandbox) + 4 libs (api-spec, api-zod, api-client-react, db)
+- [Mockup Sandbox Generated File](mockup-sandbox-generated.md) — src/.generated/mockup-components.ts hanya ada saat dev server running; clean checkout bisa gagal typecheck
