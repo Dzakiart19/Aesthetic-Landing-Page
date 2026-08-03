@@ -31,7 +31,7 @@ export function HeroSection() {
           initial={{ opacity: 0, scale: 0.9, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full aspect-video overflow-hidden shadow-2xl relative border-2 border-primary/20 hover:border-primary/50 transition-colors duration-500 bg-black group"
+          className="w-full aspect-[9/16] max-w-sm mx-auto rounded-sm overflow-hidden shadow-2xl relative border-2 border-primary/20 hover:border-primary/50 transition-colors duration-500 bg-black group"
         >
           <div className="absolute inset-0 bg-primary/10 mix-blend-color-burn pointer-events-none z-10 group-hover:opacity-0 transition-opacity duration-500" />
           <CustomVideoPlayer />
