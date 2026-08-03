@@ -69,6 +69,28 @@ export default function Home() {
       {/* Exit Intent Dialog */}
       <ExitDialog open={showExitDialog} onStay={handleStay} onLeave={handleLeave} />
 
+      {/* Partner Bar */}
+      <div className="w-full bg-primary/10 border-b border-primary/30 py-2 px-4 flex items-center justify-center gap-3 flex-wrap z-20 relative">
+        <span className="text-white/50 text-xs font-sans font-bold uppercase tracking-widest">🔥 Partner Site:</span>
+        <a
+          href="https://vidorey.web.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary font-bold text-sm font-sans uppercase tracking-wider hover:text-white transition-colors duration-200 hover:underline"
+        >
+          🥵 Vidorey
+        </a>
+        <span className="text-primary/30 text-xs">|</span>
+        <a
+          href="https://kampung-bokep.web.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary font-bold text-sm font-sans uppercase tracking-wider hover:text-white transition-colors duration-200 hover:underline"
+        >
+          💦 Kampung Bokep
+        </a>
+      </div>
+
       {/* Global Grain Overlay */}
       <div className="grain-overlay" />
       
